@@ -1,0 +1,49 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{TitlesPWR}[Sustom titles for PWR reports]
+
+\newcommand{\titlePWR}[7]{
+  % 1.Temat 
+  % 2.Autor
+  % 3.Przedmiot 
+  % 4.Prowadzący
+  % 5.Wydział
+  % 6.Kierunek
+  % 7.Specjalizacja
+    \begin{flushleft}
+        \includegraphics{Logo_PWR.png}\\
+        \fontsize{11}{1}\selectfont{
+            \vspace{30pt}
+            \textbf{#5}\\
+            Kierunek studiów: \textbf{#6}\\
+            Specjalność: \textbf{#7}\\
+            }
+            
+            \vspace{10pt}
+    \end{flushleft}
+    \begin{center}
+        \textbf{
+            \fontsize{20}{30}\selectfont 
+            #3 \\}
+            
+        \vspace{20pt}
+
+        \textbf{
+            \fontsize{18}{20}\selectfont 
+            #1
+            % Rurowy wymiennik ciepła typu: \\
+            % Rura w rurze - rury gięte\\
+            }
+            
+        \vspace{50pt}
+        \fontsize{16}{20}\selectfont #2 \\
+        \vspace{50pt}
+        Prowadzący:\\
+        #4\\
+        \vfill
+        Wrocław \the\year
+
+        \vspace{20pt}
+        % #1
+    \end{center}
+    \pagebreak
+}
