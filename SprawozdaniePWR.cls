@@ -35,6 +35,7 @@
 }
 % === Own packages ===
 \RequirePackage{TitlesPWR}
+\RequirePackage{UnitsPWR}
 
 % === Theorem styles ===
 \theoremstyle{definition}
