@@ -1,48 +1,37 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{UnitsPWR}[Custom units symbols for PWR reports]
+\RequirePackage{ xparse }
 
-\newcommand{\mmTOm}[1]{
+\NewDocumentCommand{\mmTOm}{m}{
     \ensuremath{\frac{#1mm}{1000}}
 }
 
-\newcommand{\gTOkg}[1]{
+\NewDocumentCommand{\gTOkg}{m}{
     \ensuremath{\frac{#1g}{1000}}
 }
 
-\newcommand{\AREAm}{
-    \ensuremath{m^2}
+\NewDocumentCommand{\AREA}{O{}}{
+    \ensuremath{ { #1m }^2 }
 }
 
-\newcommand{\AREAmm}{
-    \ensuremath{mm^2}
+\NewDocumentCommand{\VOLUME}{O{}}{
+    \ensuremath{ { #1m }^3 }
 }
 
-\newcommand{\VOLUMEm}{
-    \ensuremath{m^3}
-}
-
-\newcommand{\VOLUMEdm}{
-    \ensuremath{dm^3}
-}
-
-\newcommand{\VELOCITY}{
-    \ensuremath{\frac{m}{s}}
+\NewDocumentCommand{\VELOCITY}{O{} O{s}}{
+    \ensuremath{\frac{#1m}{#2}}
 }
 
 \newcommand{\ACCELERATION}{
     \ensuremath{\frac{m}{s^2}}
 }
 
-\newcommand{\FLOWRATEs}{
-    \ensuremath{\frac{m^3}{s}}
+\NewDocumentCommand{\FLOWRATEvol}{O{} O{s}}{
+    \ensuremath{\frac{{#1m}^3}{#2}}
 }
 
-\newcommand{\FLOWRATEh}{
-    \ensuremath{\frac{m^3}{h}}
-}
-
-\newcommand{\FLOWRATEkgs}{
-    \ensuremath{\frac{kg}{s}}
+\NewDocumentCommand{\FLOWRATEmass}{O{k} O{s}}{
+    \ensuremath{\frac{#1g^3}{#2}}
 }
 
 \newcommand{\CONVECTIONa}{
@@ -53,7 +42,7 @@
     \ensuremath{\frac{W}{m \cdot K}}
 }
 
-\newcommand{\DEGc}{
+\newcommand{\TMPERATURE}{
     \ensuremath{^\circ C}
 }
 
@@ -73,8 +62,13 @@
     \ensuremath{\frac{J}{kg \cdot K}}
 }
 
+\NewDocumentCommand{\ENTHALPY}{O{}}{
+    \ensuremath{\frac{#1J}{kg}}
+}
 
-
+\NewDocumentCommand{\ENTHROPY}{O{}}{
+    \ensuremath{\frac{#1J}{kg \cdot K}}
+}
 
 
 
